@@ -7,7 +7,7 @@ public class TestPascal {
   
   APascal pascal = 
       new RecursivePascal();
-  //  new IterativePascal();
+   // new IterativePascal();
   
   //expectedes Arrays
   int[] N0  =                 { 1};

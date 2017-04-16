@@ -22,5 +22,16 @@ public abstract class APascal {
    * @return Nth Row as array
    */
   public abstract int[] calcNRow(int N);
+  
+  /**
+   * Debug pöpis
+   * @param arr
+   */
+  public static void printArr(int[] arr){
+    for (int i=0; arr.length > i; i++){
+      System.err.print(arr[i]);
+    }
+    System.err.println();
+  }
 
 }
