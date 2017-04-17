@@ -62,7 +62,7 @@ public class FastPascal extends APascal {
 	
 	public static void main(String [] args){
 		FastPascal fp = new FastPascal();
-		fp.calcNRow(65);
+		fp.calcNRow(65); 
 		System.err.println(String.format("%d", globalCount));
 	}
 
