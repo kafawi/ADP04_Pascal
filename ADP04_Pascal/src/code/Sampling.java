@@ -55,7 +55,9 @@ public class Sampling {
     long startTime = 0;
     long time = 0;
 
-    APascal[] pascals = { new RecursivePascal(), new IterativePascal()
+    APascal[] pascals = { 
+    		new RecursivePascal(),
+    		new IterativePascal()
     ,new FastPascal()
     };
 

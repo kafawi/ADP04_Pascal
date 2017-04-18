@@ -37,7 +37,7 @@ public class FastPascal extends APascal {
 	private int binomialCoefficient(int n, int k){
 		int erg = 0;
 		if(k == 0){
-			return 1;
+			return 1; 
 		} else {
 			long zaehler = 1;
 			long nenner = 1;
@@ -60,9 +60,9 @@ public class FastPascal extends APascal {
 	 *
 	 */
 	  private int bc(int n, int k){
-	    int res =1;
+	    int res = 1; globalCount++;
 	    int K=k;
-	    //K = (2*k > n) ? n-k : k ;
+	    K = (2*k > n) ? n-k : k ;  
 
 	    for (int i=1;i <= K; i++){
 	      globalCount++;
