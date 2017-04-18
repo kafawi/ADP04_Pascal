@@ -144,8 +144,9 @@ T(N)= N*k(N) +1 = \sum^N_{i=0}(i+1) + 1 = \frac{(N+2)(N+1)}{2} +1 = \frac{N^2+3N
 In der Binominalkoeffizient-Methode hier, FastPascal genannt, wird die N`te Zeile des Pascal`schen Dreiecks, direkt, mit Hilfe der Formel 
 $\binom{N}{k} = \frac{N!}{k!*(N-k)!}$ 
 für jede 'Spalte' der Zeile berechnet.
+<<<<<<< HEAD
 Aufwand: $(\sum\nolimits_{k=1}^{N-1})+(\sum\nolimits_{k=1}^{N-1}) = 2N$ \\
-Da jedoch auch alle Spalten berechnet werden müssen, wie der Aufwand wie folgt berechnet:
+Da jedoch auch alle Spalten berechnet werden müssen, wird der Aufwand wie folgt berechnet:
 $T(N)= N* 2N = 2N^2 = \mathcal{O}(N^2)$
 
 Es wurde jedoch auf einen noch angeblich schnelleren Algorithmus zurückgegriffen, welcher nur funtioniert, wenn $N$ und $k$ Elemente der Natürlichen zahlen sind. (Es ist dabei zu achten, dass die Berechnung in den Rationalen Zahlenbereich gehen kann.)
