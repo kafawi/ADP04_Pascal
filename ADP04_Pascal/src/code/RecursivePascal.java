@@ -90,6 +90,7 @@ public class RecursivePascal extends APascal {
     }
     System.err.println();
     printArr(p.calcNRow(N));
+    System.err.format("%d : %d\n",globalCount, N*N*N*N + N*N*N + N*N + N);
   }
 
 }
