@@ -6,8 +6,9 @@ import org.junit.Test;
 public class TestPascal {
   
   APascal pascal = 
-      new RecursivePascal();
+   // new RecursivePascal();
    // new IterativePascal();
+    new FastPascal();
   
   //expectedes Arrays
   int[] N0  =                 { 1};

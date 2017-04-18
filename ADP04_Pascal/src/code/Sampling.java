@@ -56,7 +56,7 @@ public class Sampling {
     long time = 0;
 
     APascal[] pascals = { new RecursivePascal(), new IterativePascal()
-    // ,new IterativePascal()
+    ,new FastPascal()
     };
 
     FileWriter files[] = openFile("sample.txt");

@@ -1,4 +1,4 @@
-package Test;
+package code;
 
 
 /**
@@ -18,12 +18,14 @@ public class FastPascal extends APascal {
 	 */
 	public int[] calcNRow(int N){
 		int[] ergArray = new int[N+1];
-		if(N == 0){
-			ergArray[0] = 1;
-		} else {
-			for(int i = 0; i < ergArray.length; i++){
-				ergArray[i] = binomialCoefficient(N, i);
-			}
+		globalCount =0;
+		//if(N == 0){
+		//	ergArray[0] = 1;
+		//} else {
+			for(int i = 0; i < N+1; i++){
+				//ergArray[i] = binomialCoefficient(N, i);
+				ergArray[i] = bc(N, i);
+		//	}
 		}		
 		return ergArray;
 	}
@@ -53,16 +55,41 @@ public class FastPascal extends APascal {
 		return erg;
 	}
 	
+	/**
+	 * noch faster
+	 *
+	 */
+	  private int bc(int n, int k){
+	    int res =1;
+	    int K=k;
+	    //K = (2*k > n) ? n-k : k ;
+
+	    for (int i=1;i <= K; i++){
+	      globalCount++;
+	      res *= (n-K+i);
+	      res /= i;
+	    }
+	    return res;
+	  }
+	  
+	
 	public static void printArr(int[] arr){
 	    for (int i=0; arr.length > i; i++){
-	      System.err.print(arr[i]);
+	      System.err.format("%d ",arr[i]);
 	    }
 	    System.err.println();
 	  }
 	
 	public static void main(String [] args){
 		FastPascal fp = new FastPascal();
-		fp.calcNRow(65); 
+		printArr(fp.calcNRow(0));
+		printArr(fp.calcNRow(1));
+		printArr(fp.calcNRow(2));
+		printArr(fp.calcNRow(3));
+		printArr(fp.calcNRow(4));
+		printArr(fp.calcNRow(5));
+		printArr(fp.calcNRow(6));
+		printArr(fp.calcNRow(7));
 		System.err.println(String.format("%d", globalCount));
 	}
 
