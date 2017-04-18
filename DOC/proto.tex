@@ -84,11 +84,27 @@
 	& \today & \\
 \end{tabular}
 
-\section*{\titel}
+\section*{Abstract}
 \centering
-Die Berechnung des pascalische Dreieck soll in drei verschiedenen Algorithmen realisiert werden. Die \mbox{Komplexität} der Implementationen soll mittels einer Messung bestimmt werden. Die Algorithmen wurden recursiv, iterativ und über den Binominalkoeffizienten für natürliche Zahlen realisiert.  
+Die Berechnung des Pascal`sche Dreieck soll in drei verschiedenen Algorithmen realisiert werden. Die \mbox{Komplexität} der Implementationen soll mittels einer Messung bestimmt werden. Die Algorithmen wurden rekursiv, iterativ und über den Binominalkoeffizienten für natürliche Zahlen realisiert.  
 
 \normalsize
+\subsection*{Methoden}
+
+\subsubsection*{1. Rekursive-Methode}
+In der rekursiven Methode wird die N'te Zeile des Pascal`schen Dreiecks von der 0'ten Zeile an, Zeile für Zeile, durch Wiederaufrufen der gleichen Funktion errechnet.
+$ $
+
+\subsubsection*{2. Iterative-Methode}
+In der iterativen Methode wird die N'te Zeile des Pascal`schen Dreiecks von der 0'ten Zeile an, Zeile für Zeile, durch N-fachen Schleifenaufruf berechnet.
+$ $
+
+\subsubsection*{3. Binominalkoeffizient-Methode}
+In der Binominalkoeffizient-Methode hier, FastPascal genannt, wird die N`te Zeile des Pascal`schen Dreiecks, direkt, mit Hilfe der Formel 
+$\binom{n}{k} = \frac{n!}{k!*(n-k)!}$ 
+für jede 'Spalte' der Zeile berechnet.
+Aufwand: $(\sum\nolimits_{k=1}^{N-1})+(\sum\nolimits_{k=1}^{N-1}) = 2N$
+
 
 \flushleft
 \subsection*{Die Messung}
